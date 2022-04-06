@@ -6,7 +6,7 @@ console.log(panels[0])
 panels.forEach((panel) => {
     panel.addEventListener('click', ()=> {
         console.log(panel)
-        //removeClass()
+        removeClass()
         panel.classList.add('active')
     })
 })
