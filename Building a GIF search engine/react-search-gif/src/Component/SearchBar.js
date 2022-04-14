@@ -4,9 +4,11 @@ class SearchBar extends React.Component{
     // Constuctor creation 
     constructor(){
         super();
-        this.state = {term: ''}
+        this.state = {term: 'aa'}
     }
+    
     onInputChange(term){
+        console.log(term);
         this.setState({term});
         this.props.onTermChange(term);
     }
@@ -21,4 +23,5 @@ class SearchBar extends React.Component{
         )
     }
 }
+
 export default SearchBar;

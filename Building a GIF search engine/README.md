@@ -35,3 +35,10 @@ We are aleady extending react.Component when initializing our SearchBar class, b
 Every time we update our input, React's onchange property automatically fires.
 you probably notices the odd-looking  syntax within the curly braces.
 #### A fat arrow function like this
+e => this.onInputChange(e.target.value)
+
+is equivalent to the following code :
+function(event){
+    this.onInputChange(event.target.value);
+}
+
