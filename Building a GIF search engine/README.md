@@ -48,3 +48,26 @@ we now know that our onInputChange() methode will be fired every time the input 
 we need a way to pass data from a child component(SearchBar) to its parent (App), and in React, we can do that through props -- data or callbacks passed from a parent component to see how we can do that, let's take a look at the code we added in index.js
 
 We are already extending React.Component when initializing our SearchBar class, but if we want access to Reacts {This.state} in the constructor, we need to make sure that our class is inheriting whatever properties are inside of the constructor of the parent ReactComponent.
+
+### ClassName instead of class :
+
+why are we using className instead of class here? Remember that we are writing JSX, not HTML. class is a reserved keyword in JAVASCRIP, so we must use className instrad to set HTML classes. 
+(The same thing is true about for : if you HTML element requires for, you should use HTMLFOR instead.)
+
+### onChange Property automatically fires. 
+You probably noticed the odd-loking syntax within the curly braces. This new ES2015 feature is known as fat-arrow functions; they are a stripped down way of writing functions, similar to what you might fing in coffeecript.
+
+### SearchBar/>
+we are setting a new property called onTermChange. Whenever we set a property on a child component in this way. 
+it becomes available within that child component via this.props. In this example we are using the onTermchange property to pass the HandleTermChange().
+
+
+##### Understand what is actually happening, step-by-step, 
+from the time we open the app in our browser : 
+    1. Our App component renders ours SearchBar component with a prop of OntermChange, passing in its Own handleTermChange method as an argument.
+    2. Our SearchBar calls its constructor() method upon initialization. It creates a new state object and sets the term propery to an empty string.
+    3. The user enters some text in the input field 
+    4. Every time the user enters / deletes a character, React calls the onChange method on the input, automatically passing in an event obect as an argument. within its callback, we call our SearchBar class's OnInputChange class method, passing through the event Object.
+    5. The SearchBar's onInputChange method calls this.setstate to update the state's term property. it also calls the App components handleTermChange method, which iis passed through the onTermChange prop.
+
+## State, nesting components, and stateless function components
