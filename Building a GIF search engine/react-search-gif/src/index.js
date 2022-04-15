@@ -5,6 +5,8 @@ import SearchBar from  './Component/SearchBar';
 import {createRoot} from 'react-dom/client';
 import GifList from  './Component/GifList';
 
+import request from 'superagent'
+
 const rootElement = document.getElementById('app');
 const root = createRoot(rootElement);
 
@@ -16,18 +18,12 @@ constructor()
     super();
     this.state = 
     {
-      gifs: [
-        {id: 1, 
-        url: 'http://fakeimg.pl/300/'},
-        {id: 2, 
-        url: 'http://fakeimg.pl/300/'},
-        {id: 3,
-        url: 'http://fakeimg.pl/300/'}
-      ]
+      gifs: []
     }
 }
 
   handleTermChange(term){
+    const url = 'http://api.giphy.com/v1/gifs/search?q=${term}&api_key=l9iSKRM53pzRDedo8Ij9sVl1sHVpYuvX'
     console.log('aaaaa')
     console.log(term);
   }

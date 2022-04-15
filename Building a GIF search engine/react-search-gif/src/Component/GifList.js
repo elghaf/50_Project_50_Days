@@ -1,5 +1,5 @@
 import React from 'react'
-import GifItem from  './Component/GifItem.js';
+import GifItem from  './GifItem';
 
 
 
@@ -10,6 +10,6 @@ const GifList = (props) => {
 
     return (
         <ul>{gifItems}</ul>
-    )
+    );
 };
 export default GifList;
