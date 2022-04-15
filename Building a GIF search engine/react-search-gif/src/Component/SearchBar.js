@@ -4,7 +4,8 @@ class SearchBar extends React.Component{
     // Constuctor creation 
     constructor(){
         super();
-        this.state = {term: 'aa'}
+        this.state = {term: 'aa'};
+        //console.log(this.state[0]); == aa
     }
     
     onInputChange(term){
