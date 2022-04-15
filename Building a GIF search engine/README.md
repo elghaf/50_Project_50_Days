@@ -46,3 +46,5 @@ function(event){
 we now know that our onInputChange() methode will be fired every time the input is changed. you might be wondering, however, why we are calling this.setstate instead of setting the term directly on this.state, as we did in the constructor.
 ### this.props.onTermChange(term):
 we need a way to pass data from a child component(SearchBar) to its parent (App), and in React, we can do that through props -- data or callbacks passed from a parent component to see how we can do that, let's take a look at the code we added in index.js
+
+We are already extending React.Component when initializing our SearchBar class, but if we want access to Reacts {This.state} in the constructor, we need to make sure that our class is inheriting whatever properties are inside of the constructor of the parent ReactComponent.
