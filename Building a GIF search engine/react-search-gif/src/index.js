@@ -19,23 +19,25 @@ constructor()
     this.state = 
     {
       gifs: []
-    }
+    };
+    this.handleTermChange = this.handleTermChange.bind(this);
+}
+handleTermChange(term) {
+  const url = `http://api.giphy.com/v1/gifs/search?q=${term.replace(/\s/g, '+')}&api_key=l9iSKRM53pzRDedo8Ij9sVl1sHVpYuvX`;
+
+  request.get(url, (err, res) => {
+      this.setState({ gifs: res.body.data })
+  });
 }
 
-  handleTermChange(term){
-    const url = 'http://api.giphy.com/v1/gifs/search?q=${term}&api_key=l9iSKRM53pzRDedo8Ij9sVl1sHVpYuvX'
-    console.log('aaaaa')
-    console.log(term);
-  }
-    render() {
-        return (
-            <div className="greeting">
-                <SearchBar onTermChange = {this.handleTermChange}/>
-                <GifList gifs = {this.state.gifs}/>
-                
-            </div>
-        );
-    }
+render() {
+  return (
+      <div>
+          <SearchBar onTermChange={term => this.handleTermChange(term)}/>
+          <GifList gifs={this.state.gifs}/>
+      </div>
+  );
+}
 }
 
 root.render(
