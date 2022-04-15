@@ -71,3 +71,7 @@ from the time we open the app in our browser :
     5. The SearchBar's onInputChange method calls this.setstate to update the state's term property. it also calls the App components handleTermChange method, which iis passed through the onTermChange prop.
 
 ## State, nesting components, and stateless function components
+## Giflist 
+There are two different components we will need to build here:  GifList that maps through the array of gifs we will receive from the giphy API a GifItem to actually render the individual gifs.
+
+Before we actually worry about calling the Giphy API, let's mock up some fake data to pass to our components, In index.js, add a constructor function and initialize the state with an array of gifts. don't forget to call super() so that we actually have access to this.state
