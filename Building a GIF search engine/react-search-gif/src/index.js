@@ -4,8 +4,9 @@ import ReactDOMClient from 'react-dom';
 import SearchBar from  './Component/SearchBar';
 import {createRoot} from 'react-dom/client';
 import GifList from  './Component/GifList';
-
+import './index.css'
 import request from 'superagent'
+import GifModal from './Component/GifModal';
 
 const rootElement = document.getElementById('app');
 const root = createRoot(rootElement);
@@ -32,9 +33,12 @@ handleTermChange(term) {
 
 render() {
   return (
-      <div>
+      <div >
           <SearchBar onTermChange={term => this.handleTermChange(term)}/>
           <GifList gifs={this.state.gifs}/>
+          <GifModal modalIsOpen = {this.state.modalIsOpen}
+                    selectedGif = {this.state.selectedGif}
+                    onRequestClose= {() => this.closeModal()}/>
       </div>
   );
 }

@@ -75,36 +75,3 @@ from the time we open the app in our browser :
 There are two different components we will need to build here:  GifList that maps through the array of gifs we will receive from the giphy API a GifItem to actually render the individual gifs.
 
 Before we actually worry about calling the Giphy API, let's mock up some fake data to pass to our components, In index.js, add a constructor function and initialize the state with an array of gifts. don't forget to call super() so that we actually have access to this.state
-
-## AJAX and APIs
-while there are a lot of ways to make HTTP requests within the node.js ecosystem,
-a library called SuperAgent is one of the best documented and easiste to use.
-Run $ npm install --save superagent to pull into your project.
-
-back it into our project. 
-
-### Request our gifs from url 
-After importing SuperAgent's request object, we want to make our 
-API call within our handleTermChange method, since that's receiving 
-the term from our SearchBar.
-
-we are setting a const named url with all three things we said we neede to make an API call. Notice the $[term] in the middle of that 
-string; this is yet anather bit of ES2015. Adding ${} to a string allows us to cancatenate a varaible.$
-but in order to use this syntax, you must wrap the string in backticks '' instead of single or double quotation marks.
-
-
-### Making it all look good --- CSS and Webpack
-
-If you ready unpacking webpack, you should already be somewhat familiar with handling css in webpack.
-we are able to import our css directly into our javascript, and best of all, create react app handles all of the configuration for us.
-
-include belpw is styling we wil be using. if you are at all familiar with css, there shouldn't be naything too confusing here:
-
-### Adding a model with a third-party package : 
-
-One of the great things about the modularity of React components is how easy it is to plig and play third party packages.
-while we could go through the trouble of writing our modal from scratch. we are instead going to pull in react modal and let it handle most
-of the heavy lifting for us.
-
-To pull the package into our project run 
-$ npm install --save react-modal
