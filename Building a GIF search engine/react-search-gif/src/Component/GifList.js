@@ -8,6 +8,7 @@ const GifList = (props) => {
         return <GifItem key = {image.id} gif = {image}/>
     });
 
+    
     return (
         <div className='gif-list'>{gifItems}</div>
     );
