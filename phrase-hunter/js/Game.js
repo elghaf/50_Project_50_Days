@@ -52,7 +52,7 @@ class Game{
             button.setAttribute('disabled',true);
 
             // call show matched letter
-            this.activatePhrase.showMatchedLetter(letter);
+            this.activePhrase.showMatchedLetter(letter);
 
             // add chosen class:
 
@@ -85,8 +85,9 @@ class Game{
             if(list.length == letters.length){
                 return true;
             }
+            console.log('ra mabritich')
             console.log(list.length);
-            console.log(letter.length);
+            console.log(letters.length);
         }
 
         removeLife(){
