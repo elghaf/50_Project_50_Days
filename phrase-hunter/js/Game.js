@@ -140,9 +140,8 @@ class Game{
 
             });
 
-            /*
-            reset all life heart images
-            */
+        //    reset all life heart images
+        
 
             const hearts = document.querySelectorAll('#scoreboard img');
             hearts.forEach(heart => {
