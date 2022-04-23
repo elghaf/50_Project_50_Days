@@ -21,3 +21,19 @@ We will use an automatic CLI tools to boostrap the project.
 Usually, when you create a React app, you need to create a bunch of boilerplate files.
 First, you will need to set up a transpiler, React uses jsx syntax to describe the layout, and also you will probably want to use the modern JS features. To do this we will have to install and set up Babel. it will transform our code to normal JAVASCRIPT that current and older borwsers can cupport.
 you will need a bundler. you will have plenty of different files: your components code, styles, maybe images and fonts. To bundle them together into small packages you will have to set up WebPack or Percel.
+
+#### Break the UI into components :
+
+lets look at the app to dicide what styled components  will we define
+
+    -- Appcontainer - it will help us to arrange the columns horizontally. it is going to wrap the whole application.
+    -- ColumnContainer - it is a visual representation of a column. it will have grey background and rounded corners.
+    -- ColumnTitle - it will make the column title bold and add paddings to it.
+    -- CardContainer - it will visually represent the card.
+
+### Styles For AppContainer:
+We want our app layout to contain a list of columns arranged horizontally. we will use flexbox to achieve this.
+lets Create an AppContainer component in styles.ts and export it.
+
+
+
