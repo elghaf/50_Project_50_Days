@@ -4,6 +4,7 @@ import Head from 'next/head'
 import NavBar from '../components/navbar.js';
 import SideMenu from '../components/sideMenu.js';
 import Carousel from '../components/carousel';
+import MovieList from "../components/movieList"
 
 
 export default function Home() {
@@ -26,8 +27,9 @@ export default function Home() {
       </div>
 
       <div className="col-lg-9">
+        <Carousel/>
         <div className="row">
-          <Carousel/>
+            <MovieList/> 
 
         </div>
 
