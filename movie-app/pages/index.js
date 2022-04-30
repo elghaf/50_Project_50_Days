@@ -39,7 +39,6 @@ export default function Home() {
     <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
     <span class="caret"></span></button>
     
-    </ul>
   </div>
   </div>
   <footer className="py-5 bg-dark">
